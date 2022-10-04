@@ -5,8 +5,19 @@ local opt = vim.opt
 local g = vim.g
 
 
---UI
+-----------------UI------
+
+-- Color theme
 opt.termguicolors = true 	-- Enable colors in terminal
+cmd("colorscheme tokyonight-storm")
+
+-- Tab set to two spaces
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
+
+
 opt.number = true		-- Make line number default
 opt.relativenumber = true 	-- Make relative number default
 opt.showcmd = true
@@ -28,3 +39,5 @@ cmd [[
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()
   augroup end
 ]]
+
+
